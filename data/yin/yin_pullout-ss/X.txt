@@ -1,0 +1,1 @@
+Type_of_fiber,Fiber_diameter,Embedded_length,Youngs_modulus_of_fiber,Poisson_ratio_of_fiber,Type_of_matrix,Youngs_modulus_of_matrix,Poissons_ratio_of_matrix,Loading_rate,Prepare_temperature,Test_temperature

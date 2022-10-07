@@ -1,0 +1,1 @@
+cement,bfs,flyash,water,plasticizer,coarse,fine,age
