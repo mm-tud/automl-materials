@@ -1,7 +1,25 @@
 # AutoML Benchmark for Regression Tasks on Small Tabular Data 
 
-The code in this repository accompanies the submitted reasearch paper “Benchmarking AutoML for Regression Tasks on Small Tabular Data in Materials Design“.
-All required code to reproduce the findings is included.
+The code in this repository accompanies the paper [“Benchmarking AutoML for regression tasks on small tabular data in materials design“](https://doi.org/10.1038/s41598-022-23327-1).
+
+Bibtex entry:
+
+```
+@article{Conrad2022,
+    author  = {Conrad, Felix and M{\"a}lzer, Mauritz and Schwarzenberger, Michael and Wiemer, Hajo and Ihlenfeldt, Steffen},
+    title   = {Benchmarking AutoML for regression tasks on small tabular data in materials design},
+    journal = {Scientific Reports},
+    year    = {2022},
+    month   = {Nov},
+    day     = {11},
+    volume  = {12},
+    number  = {1},
+    pages   = {19350},
+    issn    = {2045-2322},
+    doi     = {10.1038/s41598-022-23327-1},
+    url     = {https://doi.org/10.1038/s41598-022-23327-1}
+}
+```
 
 ## Getting Started 
 
