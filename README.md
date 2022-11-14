@@ -13,8 +13,6 @@ Bibtex entry:
     month   = {Nov},
     day     = {11},
     volume  = {12},
-    number  = {1},
-    pages   = {19350},
     issn    = {2045-2322},
     doi     = {10.1038/s41598-022-23327-1},
     url     = {https://doi.org/10.1038/s41598-022-23327-1}
