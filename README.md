@@ -19,6 +19,7 @@ Bibtex entry:
 }
 ```
 
+
 ## Getting Started 
 
 A basic linux machine with an installation of docker is able to run the benchmark.
@@ -27,8 +28,56 @@ This "requirement" can be softened by editing the `Dockerfile`s and `run.py`s.
 
 Excute the `run_all.sh` script in the base directory to launch all frameworks with “our“ default settings. 
 To launch only single frameworks navigate to `framework/chosen-framework` and execute `start.sh`.
+We recommend starting the script from a `tmux` session. 
 
 *Note: If run for the first time, a login to DockerHub might be necessary in order not to exceed the rate limits for image pulls. (`docker login -u username -p $(cat docker_access_token)`)*
+
+### Console Output
+
+```
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+Dataset name: dataset-name, type: (full/split)
+
+---------------------------------------
+Task name: 'dataset-name'_'task-name'
+train_size for outer loop = X_train-size
+---------- SPLIT 1 ---------- (outer split)
+*Starting Time*
+Training over X_training-time min started
+
+Results from this outer split
+
+---------- SPLIT 2 ---------- (outer split)
+*Starting Time*
+Training over X_training-time min started
+
+Results from this outer split
+
+[...all outer splits...]
+
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Next Task
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+
+Next Dataset
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+```
+
+### Saved Results 
+
+All results are saved in the corresponding working directory of the frameworks in the following folder: _'dataset-name'\_'task-name'\_'start-time'_.  
+In this folder is saved the file _regression_summary.csv_, in which all performance metrics for each fold are stored.  
+In the folders _split\_'x'_ the outputs of the AutoML frameworks are stored, which are framework-specific.
+
+### Plot Results
+The code for visualizing the results and reproducing the figures from the paper can be found in the folder _publication\_results_.
+
 
 ## Datasets and License
 
